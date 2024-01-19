@@ -67,7 +67,7 @@ function createImageCard(imageData) {
   return imageWrapper;
 }
 
-// Отримати висоту однієї карточки галереї
+
 function getGalleryCardHeight() {
   const galleryCard = document.querySelector(".search-result");
   const cardRect = galleryCard.getBoundingClientRect();
@@ -76,7 +76,7 @@ function getGalleryCardHeight() {
 
 // Плавна прокрутка сторінки
 function smoothScrollBy(cardHeight) {
-  const scrollAmount = cardHeight * 2; // Прокрутити сторінку на дві висоти карточки галереї
+  const scrollAmount = cardHeight * 2; 
   window.scrollBy({
     top: scrollAmount,
     left: 0,
@@ -151,7 +151,7 @@ async function loadMoreImages() {
     appendImagesToGallery(data.hits);
     checkEndOfCollection();
 
-    // Отримати висоту карточки галереї та викликати плавну прокрутку
+    
     const cardHeight = getGalleryCardHeight();
     smoothScrollBy(cardHeight);
   } catch (error) {
