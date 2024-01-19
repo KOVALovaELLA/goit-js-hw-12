@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Search Images App</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
+    <form>
+      <input type="text" id="search-input" placeholder="Search for images..." />
+      <button id="search-button">Search</button>
+    </form>
 
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+    <div class="search-results"></div>
+    <button id="load-more-button" style="display: none">Load more</button>
+    <div id="loader" class="loader" style="display: none">
+      Loading images, please wait...
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>
